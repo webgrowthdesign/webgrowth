@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Papillon | Klassisk Fransk Restaurang</title>
+    <meta name="description"
+        content="Upplev en smak av Frankrike i hjärtat av staden. Klassiska franska rätter tillagade med kärlek och de bästa råvarorna.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Le Papillon</a>
+            <nav class="nav-links">
+                <a href="#meny">Vår Meny</a>
+                <a href="#om-oss">Vår Historia</a>
+                <a href="#galleri">Galleri</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#boka" class="btn btn-outline">Boka bord</a>
+            </nav>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#meny" class="mobile-link">Vår Meny</a>
+            <a href="#om-oss" class="mobile-link">Vår Historia</a>
+            <a href="#galleri" class="mobile-link">Galleri</a>
+            <a href="#kontakt" class="mobile-link">Kontakt</a>
+            <a href="#boka" class="btn btn-outline mobile-link">Boka bord</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hem">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="hero-subtitle">Bienvenue</span>
+            <h1 class="hero-title">En smak av Frankrike i hjärtat av Göteborg.</h1>
+            <p class="hero-text">Upplev klassiska franska rätter tillagade med kärlek och de bästa råvarorna i en
+                elegant och inbjudande miljö.</p>
+            <a href="#boka" class="btn btn-primary">Boka bord</a>
+        </div>
+    </section>
+
+    <!-- Meny Section -->
+    <section class="menu-section" id="meny">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Vår Meny</h2>
+                <div class="divider"></div>
+                <p>Noggrant utvalda rätter som hyllar den franska gastronomin.</p>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="forratter">Entrées <span>Förrätter</span></button>
+                <button class="tab-btn" data-tab="huvudratter">Plats Principaux <span>Huvudrätter</span></button>
+                <button class="tab-btn" data-tab="desserter">Desserts <span>Desserter</span></button>
+                <button class="tab-btn" data-tab="vinlista">Carte des Vins <span>Vinlista</span></button>
+            </div>
+
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <!-- Förrätter -->
+                <div class="menu-pane active" id="forratter">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Soupe à l'Oignon</h3>
+                            <span class="price">145 kr</span>
+                        </div>
+                        <p>Klassisk fransk löksoppa gratinerad med Gruyèreost och krutonger.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Escargots de Bourgogne</h3>
+                            <span class="price">155 kr</span>
+                        </div>
+                        <p>Ett dussin vitlöks- och persiljebakade bourgognesniglar persillade.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tartare de Boeuf</h3>
+                            <span class="price">175 kr</span>
+                        </div>
+                        <p>Råbiff på oxinnanlår med kapris, cornichoner, dijonsenap och äggula.</p>
+                    </div>
+                </div>
+
+                <!-- Huvudrätter -->
+                <div class="menu-pane" id="huvudratter">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Boeuf Bourguignon</h3>
+                            <span class="price">295 kr</span>
+                        </div>
+                        <p>Långkokt högrev i rödvin med smålök, champinjoner, sidfläsk och potatispuré.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Coq au Vin</h3>
+                            <span class="price">285 kr</span>
+                        </div>
+                        <p>Rödvinsbräserad tupp med pärllök, skogssvamp, tryffel och rotfrukter.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Loup de Mer</h3>
+                            <span class="price">325 kr</span>
+                        </div>
+                        <p>Halstrad havsabborre med beurre blanc, sparris och rostad mandelpotatis.</p>
+                    </div>
+                </div>
+
+                <!-- Desserter -->
+                <div class="menu-pane" id="desserter">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Crème Brûlée</h3>
+                            <span class="price">115 kr</span>
+                        </div>
+                        <p>Klassisk vaniljbruleé med karamelliserat rörsocker och färska hallon.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Mousse au Chocolat</h3>
+                            <span class="price">125 kr</span>
+                        </div>
+                        <p>Mörk chokladmousse med kanderade apelsinskal och vispad crême fraîche.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tarte Tatin</h3>
+                            <span class="price">135 kr</span>
+                        </div>
+                        <p>Karamelliserad upp-och-ner äppelkaka serverad med vaniljglass.</p>
+                    </div>
+                </div>
+
+                <!-- Vinlista -->
+                <div class="menu-pane" id="vinlista">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Chablis Grand Cru</h3>
+                            <span class="price">1200 kr / flaska</span>
+                        </div>
+                        <p>Domaine William Fèvre, Bourgogne. Krispig och fyllig vit bourgogne.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Châteauneuf-du-Pape</h3>
+                            <span class="price">950 kr / flaska</span>
+                        </div>
+                        <p>Château de Beaucastel, Rhône. Kraftfullt och kryddigt rödvin.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Champagne Brut Réserve</h3>
+                            <span class="price">850 kr / flaska</span>
+                        </div>
+                        <p>Taittinger, Champagne. Elegant och frisk champagne.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="om-oss">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header">
+                        <h2>Vår Historia</h2>
+                        <div class="divider left"></div>
+                    </div>
+                    <p>Le Papillon föddes ur en livslång passion för det franska köket och dess rika, djupt rotade
+                        traditioner. Vår filosofi är enkel: vi tror på ärlig matlagning där de finaste råvarorna får
+                        tala för sig själva, ackompanjerade av klassiska tekniker och en modern touch.</p>
+                    <p>Vår köksmästare, med år av erfarenhet från stjärnkrogar i Paris och Lyon, bringar en bit av det
+                        gastronomiska hjärtat i Frankrike direkt till ditt bord. Varje rätt är ett hantverk, skapat med
+                        kärlek och precision, för att erbjuda en oförglömlig smakupplevelse.</p>
+                    <div class="signature">
+                        <span>Le Chef</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="assets/le_papillon_chef_1776069658197.png" alt="Vår Kock i köket">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner / Feature -->
+    <section class="banner-section">
+        <div class="container">
+            <h2>Låt oss förgylla din kväll</h2>
+            <p>Oavsett om det är en romantisk middag för två, eller en festlig tillställning med goda vänner.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="galleri">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Galleri</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-img">
+                    <img src="assets/le_papillon_dish_1776069260447.png" alt="Coq au vin presentation">
+                </div>
+                <div class="gallery-img">
+                    <img src="assets/le_papillon_interior_1776069413028.png" alt="Restaurangens Interiör">
+                </div>
+                <div class="gallery-img">
+                    <img src="assets/le_papillon_dessert_1776069676594.png" alt="Crème Brûlée">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="boka">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h2>Boka Ditt Bord</h2>
+                    <div class="divider left"></div>
+                    <p>Vi ser fram emot att välkomna dig. Vänligen fyll i formuläret för att säkra ditt bord. För
+                        sällskap över 8 personer, vänligen kontakta oss via telefon.</p>
+                    <div class="booking-contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>031-123 45 67</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>bonjour@lepapillon.se</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form-wrapper">
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Datum</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Tid</label>
+                                <select id="time" required>
+                                    <option value="" disabled selected>Välj tid</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Personer</label>
+                                <select id="guests" required>
+                                    <option value="1">1 person</option>
+                                    <option value="2" selected>2 personer</option>
+                                    <option value="3">3 personer</option>
+                                    <option value="4">4 personer</option>
+                                    <option value="5">5 personer</option>
+                                    <option value="6">6 personer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Namn</label>
+                                <input type="text" id="name" placeholder="För- och efternamn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" placeholder="Ditt telefonnummer" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" placeholder="Din e-postadress" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Bekräfta Bokning</button>
+                        <div id="booking-success" class="booking-success-msg hidden">
+                            <i data-lucide="check-circle"></i> Tack för din bokning! Vi har skickat en bekräftelse.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact-section" id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <h2>Kontakt & Hitta Oss</h2>
+                    <div class="divider"></div>
+                    <div class="info-lists">
+                        <div class="info-block">
+                            <h3>Adress</h3>
+                            <p>adressen<br>111 11 Göteborg</p>
+                        </div>
+                        <div class="info-block">
+                            <h3>Öppettider</h3>
+                            <p>Måndag - Stängt<br>Tisdag - Torsdag 17:00 - 23:00<br>Fredag - Lördag 17:00 -
+                                01:00<br>Söndag - 16:00 - 22:00</p>
+                        </div>
+                        <div class="info-block">
+                            <h3>Hitta & Följ Oss</h3>
+                            <div class="social-icons" style="justify-content: center;">
+                                <a href="https://maps.google.com/?q=Kungsportsavenyen+1,+Göteborg" target="_blank"
+                                    aria-label="Google Maps"><i data-lucide="map-pin"></i></a>
+                                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Le Papillon</div>
+                <div class="footer-contact">
+                    <p>adressen, Göteborg | 031-123 45 67 | bonjour@lepapillon.se</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Le Papillon. Alla rättigheter förbehållna.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

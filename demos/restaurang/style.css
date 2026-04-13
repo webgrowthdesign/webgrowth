@@ -1,0 +1,778 @@
+/* CSS Variables - Color Palette Definition */
+:root {
+    --primary-color: #5c001e; /* Deep Burgundy / Vinrött */
+    --primary-dark: #3a0013;
+    --bg-color: #fcf9f2;      /* Cream */
+    --text-main: #1a1a1a;
+    --text-muted: #5e5a52;
+    --accent: #d4af37;        /* Gold / Brass */
+    --accent-hover: #b5952f;
+    --wood: #2a201a;          /* Dark wood */
+    --white: #ffffff;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+    --shadow-card: 0 15px 40px rgba(92, 0, 30, 0.08);
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1.2rem;
+    color: var(--text-muted);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.text-center { text-align: center; }
+
+/* Dividers */
+.divider {
+    height: 2px;
+    width: 60px;
+    background-color: var(--accent);
+    margin: 1.5rem auto 2rem;
+}
+.divider.left {
+    margin: 1.5rem 0 2rem 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(252, 249, 242, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transition);
+}
+
+header.scrolled {
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links a:not(.btn) {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--wood);
+    position: relative;
+}
+
+.nav-links a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.nav-links a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav a {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.mobile-nav .btn {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('assets/le_papillon_interior_1776069413028.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(42, 32, 26, 0.7), rgba(92, 0, 30, 0.8));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero-title {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+}
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    padding: 0 10%;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: var(--white);
+    position: relative;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-btn span {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    color: #999;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.tab-btn:hover { color: var(--primary-color); }
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active span {
+    color: var(--accent);
+}
+
+.tab-btn.active::after {
+    width: 80%;
+}
+
+.menu-pane {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.menu-pane.active {
+    display: block;
+}
+
+.menu-item {
+    margin-bottom: 2.5rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Dotted leader for menu */
+.menu-item-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0;
+    right: 0;
+    border-bottom: 1px dotted rgba(92, 0, 30, 0.3);
+    z-index: 0;
+}
+
+.menu-item-header h3 {
+    margin: 0;
+    background-color: var(--white);
+    padding-right: 1rem;
+    z-index: 1;
+    font-size: 1.4rem;
+    color: var(--wood);
+}
+
+.menu-item-header .price {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background-color: var(--white);
+    padding-left: 1rem;
+    z-index: 1;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #666;
+    margin: 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.about-section h2 {
+    color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.signature {
+    font-family: 'Brush Script MT', cursive, var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-top: 2rem;
+}
+
+.image-frame {
+    position: relative;
+    padding: 20px;
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent);
+    z-index: 0;
+    transform: translate(20px, 20px);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
+    aspect-ratio: 4/5;
+}
+
+/* Banner Section */
+.banner-section {
+    background-image: url('assets/le_papillon_dessert_1776069676594.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(42, 32, 26, 0.8);
+}
+
+.banner-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-section h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner-section p {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/* Gallery */
+.gallery-section {
+    background-color: var(--bg-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-img {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 1/1;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+    transform: scale(1.1);
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: var(--white);
+    background-image: radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 4rem;
+    background-color: var(--white);
+    box-shadow: var(--shadow-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.booking-info {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 4rem;
+}
+
+.booking-info h2 {
+    color: var(--white);
+}
+
+.booking-info p {
+    color: rgba(255,255,255,0.8);
+}
+
+.booking-contact-details {
+    margin-top: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item i {
+    color: var(--accent);
+}
+
+.booking-form-wrapper {
+    padding: 4rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Specifically for select inputs to look nicer */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235c001e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.booking-success-msg {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Contact Section */
+.contact-grid {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-lists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-block {
+    margin-bottom: 2.5rem;
+}
+
+.info-block h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--wood);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.footer-contact p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+}
+
+.footer-copyright p {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-title { font-size: 3rem; }
+    .about-grid { gap: 2rem; }
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+    .booking-info, .booking-form-wrapper {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-frame { margin-top: 2rem; }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Menu section mobile accordion style adjustments */
+    .menu-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .tab-btn {
+        background-color: rgba(0,0,0,0.03);
+        border-radius: 4px;
+        padding: 1rem;
+    }
+    
+    .tab-btn::after { display: none; }
+    
+    .tab-btn.active {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
+    
+    .tab-btn.active span {
+        color: rgba(255,255,255,0.8);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
