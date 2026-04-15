@@ -469,8 +469,14 @@
                 </div>
 
                 <div class="contact-form-card reveal">
-                    <form id="leadForm" name="contact" method="POST" data-netlify="true" netlify class="form">
+                    <form id="leadForm" name="contact" method="POST" netlify netlify-honeypot="bot-field" netlify
+                        class="form">
                         <input type="hidden" name="form-name" value="contact">
+
+                        <p style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+
                         <h3>Kontakta mig för din gratis demo</h3>
                         <div class="form-group">
                             <label for="name">Ditt namn</label>
