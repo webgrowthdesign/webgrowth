@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webgrowth — Fler kunder via Google för lokala företag</title>
-    <link rel="icon" type="image/png" href="assets/prof.png">
+
+    <title>Webgrowth | Hemsidor & SEO-optimering för lokala företag</title>
+
     <meta name="description"
         content="Vi bygger snabba, moderna hemsidor som faktiskt syns på Google. SEO-optimering, Google Maps och professionell webbdesign för svenska småföretag.">
-    <!-- Fonts -->
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://webgrowth.today/">
+    <meta property=" og:title" content="Webgrowth | Hemsidor & SEO för lokala företag">
+    <meta property="og:description"
+        content="Vi bygger snabba, moderna hemsidor som faktiskt syns på Google. Få fler kunder med vår hjälp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webgrowth.today/">
+    <link rel=" icon" type="image/png" href="assets/prof.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Icons -->
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
@@ -44,7 +53,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero" id="hero">
         <div class="hero-glow"></div>
         <div class="hero-grid-bg"></div>
@@ -54,7 +62,7 @@
                     <span class="pulse-dot"></span>
                     Tillgänglig för nya uppdrag
                 </div>
-                <h1 class="reveal">Fler kunder till ditt<br>företag via Google</h1>
+                <h1 class="reveal">Fler kunder till ditt företag<br>via Google & SEO</h1>
                 <p class="hero-sub reveal">Vi bygger snabba, moderna hemsidor som faktiskt syns. Från lokal
                     sökoptimering till snygg design — vi hjälper ditt företag att växa digitalt.</p>
                 <div class="hero-actions reveal">
@@ -130,7 +138,6 @@
         </div>
     </header>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -180,7 +187,6 @@
         </div>
     </section>
 
-    <!-- How It Works -->
     <section class="process" id="process">
         <div class="container">
             <div class="section-header">
@@ -232,7 +238,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -243,7 +248,8 @@
             </div>
 
             <div class="portfolio-grid">
-                <a href="demos/restaurang/index.html" target="_blank" class="portfolio-card reveal">
+                <a href="demos/restaurang/index.html" target="_blank" rel="noopener noreferrer"
+                    class="portfolio-card reveal">
                     <div class="portfolio-preview">
                         <div class="portfolio-mockup">
                             <div class="pm-header">
@@ -271,7 +277,8 @@
                     </div>
                 </a>
 
-                <a href="demos/byggfirma/index.html" target="_blank" class="portfolio-card reveal">
+                <a href="demos/byggfirma/index.html" target="_blank" rel="noopener noreferrer"
+                    class="portfolio-card reveal">
                     <div class="portfolio-preview">
                         <div class="portfolio-mockup">
                             <div class="pm-header">
@@ -301,7 +308,7 @@
                     </div>
                 </a>
 
-                <a href="demos/vvs/index.html" target="_blank" class="portfolio-card reveal">
+                <a href="demos/vvs/index.html" target="_blank" rel="noopener noreferrer" class="portfolio-card reveal">
                     <div class="portfolio-preview">
                         <div class="portfolio-mockup">
                             <div class="pm-header">
@@ -333,7 +340,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
@@ -401,7 +407,6 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-wrapper reveal">
@@ -433,7 +438,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-wrapper">
@@ -469,8 +473,7 @@
                 </div>
 
                 <div class="contact-form-card reveal">
-                    <form id="leadForm" name="contact" method="POST" netlify netlify-honeypot="bot-field" netlify
-                        class="form">
+                    <form id="leadForm" name="contact" method="POST" netlify netlify-honeypot="bot-field" class="form">
                         <input type="hidden" name="form-name" value="contact">
 
                         <p style="display:none;">
@@ -480,7 +483,7 @@
                         <h3>Kontakta mig för din gratis demo</h3>
                         <div class="form-group">
                             <label for="name">Ditt namn</label>
-                            <input type="text" id="name" name="name" placeholder="Fransic Bacon" required>
+                            <input type="text" id="name" name="name" placeholder="Francis Bacon" required>
                         </div>
                         <div class="form-group">
                             <label for="business">Företagsnamn</label>
@@ -488,7 +491,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">E-post</label>
-                            <input type="email" id="email" name="email" placeholder="Fransic@mittforetag.se" required>
+                            <input type="email" id="email" name="email" placeholder="Francis@mittforetag.se" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Berätta om ditt företag</label>
@@ -505,7 +508,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
