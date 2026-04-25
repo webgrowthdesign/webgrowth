@@ -12,12 +12,14 @@
 
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://webgrowth.today/">
-    <meta property=" og:title" content="Webgrowth | Hemsidor & SEO för lokala företag">
+    <meta property="og:title" content="Webgrowth | Hemsidor &amp; SEO för lokala företag">
     <meta property="og:description"
         content="Vi bygger snabba, moderna hemsidor som faktiskt syns på Google. Få fler kunder med vår hjälp.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://webgrowth.today/">
-    <link rel=" icon" type="image/png" href="assets/prof.png">
+    <meta property="og:image" content="https://webgrowth.today/prof.png">
+    <meta property="og:image:alt" content="Carl Hoel — Webgrowth.today">
+    <link rel="icon" type="image/png" href="prof.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +29,26 @@
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Strukturerad data: Google förstår vem du är och visar din bild i sökresultat -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carl Hoel",
+      "url": "https://webgrowth.today/",
+      "image": "https://webgrowth.today/prof.png",
+      "jobTitle": "Gymnasieingenj\u00f6r i mjukvaruutveckling",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Webgrowth.today"
+      },
+      "telephone": "+4670373525500",
+      "sameAs": [
+        "https://webgrowth.today/"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -412,8 +434,8 @@
             <div class="about-wrapper reveal">
                 <div class="about-text">
                     <span class="section-tag">Om mig</span>
-                    <h2>Hej, jag är utvecklaren bakom Webgrowth.today</h2>
-                    <p>Jag är en blivande mjukvaruingenjör som vill hjälpa företag att växa
+                    <h2>Hej, jag heter Carl Hoel — utvecklaren bakom Webgrowth.today</h2>
+                    <p>Jag är gymnasieingenjör i mjukvaruutveckling och vill hjälpa företag att växa
                         digitalt. Jag har startat det här som en hobbyverksamhet med mål att få det att kunna starta
                         bolag. Jag vet att en snickare, hantverkare eller restaurangägare inte ska behöva oroa sig
                         för teknik — de ska fokusera på sitt jobb.</p>
@@ -509,6 +531,59 @@
         </div>
     </section>
 
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Vanliga frågor</span>
+                <h2 class="reveal">FAQ</h2>
+                <p class="section-desc reveal">Svar på de vanligaste frågorna om hur det fungerar att jobba med mig.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Hur fakturerar du?</span>
+                        <i class="ph-bold ph-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Jag fakturerar som privatperson via <strong>Frilans Finans</strong>. Det innebär att du får
+                            en vanlig faktura med moms och att alla sociala avgifter, skatter och försäkringar hanteras
+                            korrekt enligt svensk lag.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Behöver jag betala i förväg?</span>
+                        <i class="ph-bold ph-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nej — du betalar ingenting förrän du är nöjd med den färdiga hemsidan. Jag bygger en gratis
+                            demo så du kan se exakt vad du får innan fakturan skickas.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Hur lång tid tar det att bygga hemsidan?</span>
+                        <i class="ph-bold ph-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vanligtvis är en färdig demo redo inom 3–5 arbetsdagar efter att jag fått information om ditt
+                            företag. Lanseringen sker strax efter att du godkänt designen.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Vad händer efter att hemsidan är live?</span>
+                        <i class="ph-bold ph-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Du äger allting själv — kod, domän och hosting. Jag erbjuder 2 veckors gratis support efter
+                            lansering. Vill du ha löpande hjälp kan vi komma överens om det separat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -532,6 +607,9 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Webgrowth.today. Alla rättigheter förbehållna.</p>
+                <p class="footer-phone"><a href="tel:+4670373525500"><i class="ph-fill ph-phone"></i> +46 70 373 52
+                        55</a>
+                </p>
             </div>
         </div>
     </footer>
