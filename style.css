@@ -937,14 +937,22 @@ ul {
     background: var(--bg-surface);
 }
 
-.pricing-card {
-    max-width: 520px;
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 960px;
     margin: 0 auto;
+}
+
+.pricing-card {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     overflow: hidden;
     transition: all var(--duration) var(--ease);
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -1020,6 +1028,7 @@ ul {
 
 .pricing-bottom {
     padding: 0 32px 36px;
+    margin-top: auto;
 }
 
 .pricing-guarantee {
@@ -1433,6 +1442,11 @@ ul {
 
     .portfolio-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
     }
 
     .contact-wrapper {
