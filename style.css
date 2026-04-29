@@ -939,9 +939,9 @@ ul {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 32px;
-    max-width: 960px;
+    max-width: 520px;
     margin: 0 auto;
 }
 
